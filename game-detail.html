@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="vi">
   <head>
     <meta charset="UTF-8" />
@@ -16,7 +16,9 @@
         --border: rgba(255, 255, 255, 0.1);
       }
 
-      * { box-sizing: border-box; }
+      * {
+        box-sizing: border-box;
+      }
 
       body {
         margin: 0;
@@ -40,14 +42,20 @@
         font-weight: 600;
       }
 
-      .back:hover { color: var(--accent); }
+      .back:hover {
+        color: var(--accent);
+      }
 
       .hero {
-        background: linear-gradient(120deg, rgba(7, 89, 133, 0.95), rgba(124, 58, 237, 0.95));
+        background: linear-gradient(
+          120deg,
+          rgba(7, 89, 133, 0.95),
+          rgba(124, 58, 237, 0.95)
+        );
         border: 1px solid var(--border);
         border-radius: 24px;
         overflow: hidden;
-        box-shadow: 0 20px 50px rgba(0,0,0,0.24);
+        box-shadow: 0 20px 50px rgba(0, 0, 0, 0.24);
       }
 
       .hero img {
@@ -61,14 +69,21 @@
         padding: 24px;
       }
 
-      .hero-content h1 { margin: 0 0 10px; font-size: 2rem; }
-      .hero-content p { margin: 0 0 14px; line-height: 1.7; color: #e2e8f0; }
+      .hero-content h1 {
+        margin: 0 0 10px;
+        font-size: 2rem;
+      }
+      .hero-content p {
+        margin: 0 0 14px;
+        line-height: 1.7;
+        color: #e2e8f0;
+      }
 
       .pill {
         display: inline-block;
         padding: 7px 12px;
         border-radius: 999px;
-        background: rgba(255,255,255,0.15);
+        background: rgba(255, 255, 255, 0.15);
         margin-right: 8px;
         margin-bottom: 8px;
         font-size: 0.9rem;
@@ -88,9 +103,18 @@
         padding: 20px;
       }
 
-      .panel h2 { margin-top: 0; font-size: 1.2rem; }
-      .panel p, .panel li { color: var(--muted); line-height: 1.7; }
-      .panel ul { padding-left: 18px; }
+      .panel h2 {
+        margin-top: 0;
+        font-size: 1.2rem;
+      }
+      .panel p,
+      .panel li {
+        color: var(--muted);
+        line-height: 1.7;
+      }
+      .panel ul {
+        padding-left: 18px;
+      }
 
       .stats {
         display: flex;
@@ -102,13 +126,17 @@
       .stats span {
         padding: 8px 10px;
         border-radius: 999px;
-        background: rgba(245,158,11,0.16);
+        background: rgba(245, 158, 11, 0.16);
         color: #fde68a;
       }
 
       @media (max-width: 800px) {
-        .grid { grid-template-columns: 1fr; }
-        .hero img { height: 240px; }
+        .grid {
+          grid-template-columns: 1fr;
+        }
+        .hero img {
+          height: 240px;
+        }
       }
     </style>
   </head>
@@ -126,106 +154,142 @@
       const gameDetails = {
         valorant: {
           title: "Valorant",
-          image: "https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&w=1200&q=80",
+          image:
+            "https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&w=1200&q=80",
           tag: "FPS / Esports",
-          summary: "Valorant là một trò chơi bắn súng chiến thuật 5vs5 do Riot Games phát triển, nổi bật nhờ lối chơi nhanh, kỹ năng cao và hệ thống nhân vật có cá tính.",
-          highlight: ["Cộng đồng esports cực lớn", "Được yêu thích ở nhiều khu vực", "Cập nhật nội dung thường xuyên"],
+          summary:
+            "Valorant là một trò chơi bắn súng chiến thuật 5vs5 do Riot Games phát triển, nổi bật nhờ lối chơi nhanh, kỹ năng cao và hệ thống nhân vật có cá tính.",
+          highlight: [
+            "Cộng đồng esports cực lớn",
+            "Được yêu thích ở nhiều khu vực",
+            "Cập nhật nội dung thường xuyên",
+          ],
           community: [
             "Cộng đồng người chơi đông đảo trên Twitch, YouTube và Discord.",
             "Các giải đấu lớn như VCT thu hút hàng triệu người theo dõi.",
-            "Nhiều đội tuyển và streamer chuyên nghiệp hoạt động liên tục."
+            "Nhiều đội tuyển và streamer chuyên nghiệp hoạt động liên tục.",
           ],
           history: [
             "Ra mắt vào năm 2020 và nhanh chóng trở thành một trong những game FPS phổ biến nhất.",
             "Riot Games đã đầu tư mạnh vào esports và phát triển hệ thống giải đấu chuyên nghiệp.",
-            "Từ đầu, game tập trung vào sự kết hợp giữa kỹ năng bắn súng và chiến thuật đội hình."
-          ]
+            "Từ đầu, game tập trung vào sự kết hợp giữa kỹ năng bắn súng và chiến thuật đội hình.",
+          ],
         },
         "genshin-impact": {
           title: "Genshin Impact",
-          image: "https://images.unsplash.com/photo-1511882150382-421056c89033?auto=format&fit=crop&w=1200&q=80",
+          image:
+            "https://images.unsplash.com/photo-1511882150382-421056c89033?auto=format&fit=crop&w=1200&q=80",
           tag: "Open World",
-          summary: "Genshin Impact là tựa game nhập vai thế giới mở với đồ họa đẹp, hệ thống nhân vật đa dạng và câu chuyện phong phú.",
-          highlight: ["Thế giới mở rộng lớn", "Cộng đồng fan hâm mộ rất lớn", "Nội dung cập nhật liên tục"],
+          summary:
+            "Genshin Impact là tựa game nhập vai thế giới mở với đồ họa đẹp, hệ thống nhân vật đa dạng và câu chuyện phong phú.",
+          highlight: [
+            "Thế giới mở rộng lớn",
+            "Cộng đồng fan hâm mộ rất lớn",
+            "Nội dung cập nhật liên tục",
+          ],
           community: [
             "Cộng đồng fan rất tích cực trên Reddit, Discord và mạng xã hội.",
             "Nhiều người chơi tham gia các sự kiện và cộng tác tạo nội dung.",
-            "Game luôn nhận được phản ứng tích cực từ người hâm mộ toàn cầu."
+            "Game luôn nhận được phản ứng tích cực từ người hâm mộ toàn cầu.",
           ],
           history: [
             "Phát hành năm 2020 bởi miHoYo và lập tức tạo ra cơn sốt lớn.",
             "Game được chú ý vì phong cách hình ảnh đẹp mắt và hệ thống nhân vật đa dạng.",
-            "Sau nhiều bản cập nhật, Genshin Impact vẫn duy trì sức hút mạnh mẽ."
-          ]
+            "Sau nhiều bản cập nhật, Genshin Impact vẫn duy trì sức hút mạnh mẽ.",
+          ],
         },
         fortnite: {
           title: "Fortnite",
-          image: "https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=1200&q=80",
+          image:
+            "https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=1200&q=80",
           tag: "Battle Royale",
-          summary: "Fortnite là một trò chơi battle royale mang phong cách sáng tạo, sự kiện thường xuyên và cộng đồng người chơi cực kỳ lớn.",
-          highlight: ["Sự kiện đổi mới liên tục", "Đa dạng chế độ chơi", "Cộng đồng toàn cầu"],
+          summary:
+            "Fortnite là một trò chơi battle royale mang phong cách sáng tạo, sự kiện thường xuyên và cộng đồng người chơi cực kỳ lớn.",
+          highlight: [
+            "Sự kiện đổi mới liên tục",
+            "Đa dạng chế độ chơi",
+            "Cộng đồng toàn cầu",
+          ],
           community: [
             "Fortnite có một trong những cộng đồng game lớn nhất thế giới.",
             "Nhiều streamer và YouTuber thường xuyên phát sóng và tạo nội dung.",
-            "Người chơi thường xuyên tham gia sự kiện mùa và thử thách mới."
+            "Người chơi thường xuyên tham gia sự kiện mùa và thử thách mới.",
           ],
           history: [
             "Ra mắt từ năm 2017 và nhanh chóng trở thành một hiện tượng game.",
             "Epic Games đã liên tục cập nhật chế độ, bản đồ và sự kiện mới.",
-            "Fortnite vẫn giữ vị trí nổi bật nhờ lối chơi linh hoạt và đổi mới."
-          ]
+            "Fortnite vẫn giữ vị trí nổi bật nhờ lối chơi linh hoạt và đổi mới.",
+          ],
         },
         "ea-sports-fc-25": {
           title: "EA Sports FC 25",
-          image: "https://images.unsplash.com/photo-1579952363873-27f3bade9f55?auto=format&fit=crop&w=1200&q=80",
+          image:
+            "https://images.unsplash.com/photo-1579952363873-27f3bade9f55?auto=format&fit=crop&w=1200&q=80",
           tag: "Sports",
-          summary: "EA Sports FC 25 là dòng game bóng đá điện tử nổi bật với đồ họa cải tiến và các chế độ chơi đa dạng.",
-          highlight: ["Bóng đá điện tử hiện đại", "Được yêu thích bởi fan bóng đá", "Cộng đồng thi đấu sôi động"],
+          summary:
+            "EA Sports FC 25 là dòng game bóng đá điện tử nổi bật với đồ họa cải tiến và các chế độ chơi đa dạng.",
+          highlight: [
+            "Bóng đá điện tử hiện đại",
+            "Được yêu thích bởi fan bóng đá",
+            "Cộng đồng thi đấu sôi động",
+          ],
           community: [
             "Cộng đồng người hâm mộ rất lớn ở nhiều quốc gia.",
             "Nhiều người chơi tham gia các chế độ online và giải đấu cộng đồng.",
-            "Game có nhiều sự kiện và cập nhật theo mùa bóng."
+            "Game có nhiều sự kiện và cập nhật theo mùa bóng.",
           ],
           history: [
             "Tiếp nối dòng game FIFA với tên mới từ EA Sports.",
             "Được phát triển với mục tiêu cải thiện trải nghiệm bóng đá điện tử.",
-            "Game liên tục cập nhật đội hình, mùa giải và tính năng mới."
-          ]
+            "Game liên tục cập nhật đội hình, mùa giải và tính năng mới.",
+          ],
         },
         minecraft: {
           title: "Minecraft",
-          image: "https://images.unsplash.com/photo-1601987077677-5346c0c57d3f?auto=format&fit=crop&w=1200&q=80",
+          image:
+            "https://images.unsplash.com/photo-1601987077677-5346c0c57d3f?auto=format&fit=crop&w=1200&q=80",
           tag: "Sandbox",
-          summary: "Minecraft là tựa game sáng tạo nổi tiếng với hệ sinh thái mod phong phú và cộng đồng xây dựng cực kỳ lớn.",
-          highlight: ["Sáng tạo không giới hạn", "Cộng đồng modding mạnh", "Tồn tại lâu dài và vẫn hot"],
+          summary:
+            "Minecraft là tựa game sáng tạo nổi tiếng với hệ sinh thái mod phong phú và cộng đồng xây dựng cực kỳ lớn.",
+          highlight: [
+            "Sáng tạo không giới hạn",
+            "Cộng đồng modding mạnh",
+            "Tồn tại lâu dài và vẫn hot",
+          ],
           community: [
             "Một trong những cộng đồng game lớn và bền vững nhất.",
             "Nhiều server riêng và cộng đồng xây dựng đồ thị đẹp.",
-            "Người chơi tạo ra các bản đồ, mod và video nội dung rất phong phú."
+            "Người chơi tạo ra các bản đồ, mod và video nội dung rất phong phú.",
           ],
           history: [
             "Ra mắt năm 2011 và vẫn giữ sức hút đến nay.",
             "Minecraft trở thành biểu tượng của thể loại sandbox.",
-            "Cộng đồng sáng tạo giúp game tiếp tục phát triển theo nhiều hướng."
-          ]
+            "Cộng đồng sáng tạo giúp game tiếp tục phát triển theo nhiều hướng.",
+          ],
         },
         "honkai-star-rail": {
           title: "Honkai: Star Rail",
-          image: "https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&w=1200&q=80",
+          image:
+            "https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&w=1200&q=80",
           tag: "RPG / Story",
-          summary: "Honkai: Star Rail là game nhập vai theo phong cách hành trình không gian với câu chuyện hấp dẫn và chiến đấu thú vị.",
-          highlight: ["Câu chuyện sâu sắc", "Nhân vật ấn tượng", "Hệ thống chiến đấu mạnh mẽ"],
+          summary:
+            "Honkai: Star Rail là game nhập vai theo phong cách hành trình không gian với câu chuyện hấp dẫn và chiến đấu thú vị.",
+          highlight: [
+            "Câu chuyện sâu sắc",
+            "Nhân vật ấn tượng",
+            "Hệ thống chiến đấu mạnh mẽ",
+          ],
           community: [
             "Cộng đồng fan đông đảo trên mạng xã hội và Discord.",
             "Nhiều người chơi theo dõi các bản cập nhật và sự kiện mới.",
-            "Game nhận được phản hồi tích cực nhờ nhịp độ phát triển rõ ràng."
+            "Game nhận được phản hồi tích cực nhờ nhịp độ phát triển rõ ràng.",
           ],
           history: [
             "Ra mắt gần đây nhưng đã nhanh chóng thu hút sự chú ý lớn.",
             "Phát triển bởi miHoYo với phong cách nghệ thuật riêng biệt.",
-            "Game tiếp tục mở rộng nội dung và nâng cấp trải nghiệm người chơi."
-          ]
-        }
+            "Game tiếp tục mở rộng nội dung và nâng cấp trải nghiệm người chơi.",
+          ],
+        },
       };
 
       const params = new URLSearchParams(window.location.search);
@@ -260,7 +324,8 @@
           </ul>
         `;
       } else {
-        document.getElementById("detailHero").innerHTML = "<div class='hero-content'><h1>Không tìm thấy game</h1></div>";
+        document.getElementById("detailHero").innerHTML =
+          "<div class='hero-content'><h1>Không tìm thấy game</h1></div>";
       }
     </script>
   </body>

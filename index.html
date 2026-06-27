@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="vi">
   <head>
     <meta charset="UTF-8" />
@@ -35,7 +35,11 @@
       }
 
       .hero {
-        background: linear-gradient(120deg, rgba(7, 89, 133, 0.95), rgba(124, 58, 237, 0.95));
+        background: linear-gradient(
+          120deg,
+          rgba(7, 89, 133, 0.95),
+          rgba(124, 58, 237, 0.95)
+        );
         border: 1px solid var(--border);
         border-radius: 28px;
         padding: 32px;
@@ -115,7 +119,9 @@
         border-radius: 22px;
         overflow: hidden;
         box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
-        transition: transform 0.2s ease, box-shadow 0.2s ease;
+        transition:
+          transform 0.2s ease,
+          box-shadow 0.2s ease;
       }
 
       .card:hover {
@@ -228,7 +234,8 @@
           <span class="pill">🔥 Bảng tin game mới nhất</span>
           <h1>Những game đang bùng nổ và đáng theo dõi</h1>
           <p>
-            Khám phá các tựa game hot nhất hiện nay với tin tức, xu hướng và điểm nổi bật giúp bạn luôn cập nhật nhanh nhất.
+            Khám phá các tựa game hot nhất hiện nay với tin tức, xu hướng và
+            điểm nổi bật giúp bạn luôn cập nhật nhanh nhất.
           </p>
           <div class="pill">🎮 Multiplayer</div>
           <div class="pill">⚡ Esports</div>
@@ -251,7 +258,10 @@
 
       <section class="grid" id="gamesGrid"></section>
 
-      <p class="footer">Thiết kế hiện đại, màu sắc nổi bật và tối ưu cho cả máy tính lẫn điện thoại.</p>
+      <p class="footer">
+        Thiết kế hiện đại, màu sắc nổi bật và tối ưu cho cả máy tính lẫn điện
+        thoại.
+      </p>
     </div>
 
     <script>
@@ -261,55 +271,61 @@
           title: "Valorant",
           tag: "FPS / Esports",
           desc: "Một tựa game bắn súng chiến thuật với lối chơi nhanh, đầy kịch tính và cộng đồng esports cực lớn.",
-          image: "https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&w=900&q=80",
+          image:
+            "https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&w=900&q=80",
           views: "2.4M người xem",
-          trend: "Tăng trưởng 18%"
+          trend: "Tăng trưởng 18%",
         },
         {
           slug: "genshin-impact",
           title: "Genshin Impact",
           tag: "Open World",
           desc: "Thế giới mở đẹp mắt, câu chuyện phong phú và các sự kiện mới luôn khiến người chơi hào hứng trở lại.",
-          image: "https://images.unsplash.com/photo-1511882150382-421056c89033?auto=format&fit=crop&w=900&q=80",
+          image:
+            "https://images.unsplash.com/photo-1511882150382-421056c89033?auto=format&fit=crop&w=900&q=80",
           views: "1.8M người xem",
-          trend: "Hot trong tuần"
+          trend: "Hot trong tuần",
         },
         {
           slug: "fortnite",
           title: "Fortnite",
           tag: "Battle Royale",
           desc: "Sự kiện thời trang, các mùa mới và gameplay sáng tạo giúp Fortnite luôn giữ vị trí hàng đầu.",
-          image: "https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=900&q=80",
+          image:
+            "https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=900&q=80",
           views: "3.1M người xem",
-          trend: "Xu hướng mới"
+          trend: "Xu hướng mới",
         },
         {
           slug: "ea-sports-fc-25",
           title: "EA Sports FC 25",
           tag: "Sports",
           desc: "Bóng đá điện tử với đồ họa đẹp, gameplay mượt và sự kiện bóng đá hấp dẫn mỗi mùa.",
-          image: "https://images.unsplash.com/photo-1579952363873-27f3bade9f55?auto=format&fit=crop&w=900&q=80",
+          image:
+            "https://images.unsplash.com/photo-1579952363873-27f3bade9f55?auto=format&fit=crop&w=900&q=80",
           views: "1.2M người xem",
-          trend: "Đang lên"
+          trend: "Đang lên",
         },
         {
           slug: "minecraft",
           title: "Minecraft",
           tag: "Sandbox",
           desc: "Game sáng tạo không bao giờ hết hot, đặc biệt với cộng đồng xây dựng và mod cực kỳ phong phú.",
-          image: "https://images.unsplash.com/photo-1601987077677-5346c0c57d3f?auto=format&fit=crop&w=900&q=80",
+          image:
+            "https://images.unsplash.com/photo-1601987077677-5346c0c57d3f?auto=format&fit=crop&w=900&q=80",
           views: "4.0M người xem",
-          trend: "Vĩnh cửu"
+          trend: "Vĩnh cửu",
         },
         {
           slug: "honkai-star-rail",
           title: "Honkai: Star Rail",
           tag: "RPG / Story",
           desc: "Câu chuyện lôi cuốn, nhân vật ấn tượng và hệ thống chiến đấu đa dạng khiến game luôn được chú ý.",
-          image: "https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&w=900&q=80",
+          image:
+            "https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&w=900&q=80",
           views: "1.6M người xem",
-          trend: "Phổ biến"
-        }
+          trend: "Phổ biến",
+        },
       ];
 
       const grid = document.getElementById("gamesGrid");
@@ -333,7 +349,7 @@
                 </div>
               </div>
             </article>
-          `
+          `,
         )
         .join("");
     </script>
