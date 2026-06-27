@@ -149,6 +149,16 @@
         font-size: 1.05rem;
       }
 
+      .card h3 a {
+        color: var(--text);
+        text-decoration: none;
+        transition: color 0.2s ease;
+      }
+
+      .card h3 a:hover {
+        color: var(--accent);
+      }
+
       .card p {
         color: var(--muted);
         line-height: 1.6;
@@ -247,6 +257,7 @@
     <script>
       const games = [
         {
+          slug: "valorant",
           title: "Valorant",
           tag: "FPS / Esports",
           desc: "Một tựa game bắn súng chiến thuật với lối chơi nhanh, đầy kịch tính và cộng đồng esports cực lớn.",
@@ -255,6 +266,7 @@
           trend: "Tăng trưởng 18%"
         },
         {
+          slug: "genshin-impact",
           title: "Genshin Impact",
           tag: "Open World",
           desc: "Thế giới mở đẹp mắt, câu chuyện phong phú và các sự kiện mới luôn khiến người chơi hào hứng trở lại.",
@@ -263,6 +275,7 @@
           trend: "Hot trong tuần"
         },
         {
+          slug: "fortnite",
           title: "Fortnite",
           tag: "Battle Royale",
           desc: "Sự kiện thời trang, các mùa mới và gameplay sáng tạo giúp Fortnite luôn giữ vị trí hàng đầu.",
@@ -271,6 +284,7 @@
           trend: "Xu hướng mới"
         },
         {
+          slug: "ea-sports-fc-25",
           title: "EA Sports FC 25",
           tag: "Sports",
           desc: "Bóng đá điện tử với đồ họa đẹp, gameplay mượt và sự kiện bóng đá hấp dẫn mỗi mùa.",
@@ -279,6 +293,7 @@
           trend: "Đang lên"
         },
         {
+          slug: "minecraft",
           title: "Minecraft",
           tag: "Sandbox",
           desc: "Game sáng tạo không bao giờ hết hot, đặc biệt với cộng đồng xây dựng và mod cực kỳ phong phú.",
@@ -287,6 +302,7 @@
           trend: "Vĩnh cửu"
         },
         {
+          slug: "honkai-star-rail",
           title: "Honkai: Star Rail",
           tag: "RPG / Story",
           desc: "Câu chuyện lôi cuốn, nhân vật ấn tượng và hệ thống chiến đấu đa dạng khiến game luôn được chú ý.",
@@ -305,7 +321,7 @@
               <img src="${game.image}" alt="${game.title}" loading="lazy" />
               <div class="card-body">
                 <span class="tag">${game.tag}</span>
-                <h3>${game.title}</h3>
+                <h3><a href="game-detail.html?game=${game.slug}">${game.title}</a></h3>
                 <p>${game.desc}</p>
                 <div class="meta">
                   <span>${game.views}</span>
