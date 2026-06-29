@@ -302,6 +302,10 @@ function getQueryParam(key) {
   return params.get(key);
 }
 
+function getGameImage(game) {
+  return window.gameImages?.[game.slug] || game.image;
+}
+
 function renderGameCards() {
   const grid = document.getElementById("gamesGrid");
   if (!grid) {
@@ -313,7 +317,7 @@ function renderGameCards() {
       (game) => `
         <article class="card">
           <a class="card-link" href="game-detail.html?game=${game.slug}">
-            <img src="${game.image}" alt="${game.title}" loading="lazy" />
+            <img src="${getGameImage(game)}" alt="${game.title}" loading="lazy" />
             <div class="card-body">
               <span class="tag">${game.tag}</span>
               <h3>${game.title}</h3>
@@ -359,7 +363,7 @@ function renderDetailPage() {
   }
 
   detailHero.innerHTML = `
-    <img src="${game.image}" alt="${game.title}" loading="lazy" />
+    <img src="${getGameImage(game)}" alt="${game.title}" loading="lazy" />
     <div class="hero-content">
       <span class="pill">${game.tag}</span>
       <h1>${game.title}</h1>
