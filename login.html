@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Đăng nhập hệ thống</title>
+    <style>
+      :root {
+        --bg: #050505;
+        --panel: rgba(22, 22, 22, 0.96);
+        --accent: #ff1f2b;
+        --text: #f8f8f8;
+        --muted: #b0b0b0;
+        --border: rgba(255, 31, 43, 0.18);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        min-height: 100vh;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background: radial-gradient(circle at top left, rgba(255, 31, 43, 0.18), transparent 28%),
+          radial-gradient(circle at bottom right, rgba(255, 31, 43, 0.12), transparent 30%),
+          linear-gradient(135deg, #070707 0%, #150505 40%, #090509 100%);
+        color: var(--text);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 24px;
+      }
+
+      .login-card {
+        width: min(440px, 100%);
+        background: var(--panel);
+        border: 1px solid var(--border);
+        border-radius: 24px;
+        padding: 32px;
+        box-shadow: 0 24px 60px rgba(0, 0, 0, 0.35);
+      }
+
+      .login-card h1 {
+        margin: 0 0 20px;
+        font-size: 1.85rem;
+        letter-spacing: 0.02em;
+      }
+
+      .login-card p {
+        margin: 0 0 24px;
+        color: var(--muted);
+        line-height: 1.6;
+      }
+
+      .field {
+        margin-bottom: 18px;
+      }
+
+      .field label {
+        display: block;
+        margin-bottom: 8px;
+        font-size: 0.95rem;
+        color: #e5e5e5;
+      }
+
+      .field input {
+        width: 100%;
+        padding: 14px 16px;
+        border-radius: 14px;
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        background: rgba(255, 255, 255, 0.04);
+        color: var(--text);
+        font-size: 1rem;
+      }
+
+      .field input:focus {
+        outline: none;
+        border-color: var(--accent);
+        box-shadow: 0 0 0 4px rgba(255, 31, 43, 0.12);
+      }
+
+      .actions {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 22px;
+      }
+
+      .actions label {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        color: var(--muted);
+        font-size: 0.92rem;
+      }
+
+      .actions input[type="checkbox"] {
+        width: 16px;
+        height: 16px;
+      }
+
+      .button {
+        width: 100%;
+        padding: 14px 16px;
+        border: none;
+        border-radius: 14px;
+        background: linear-gradient(135deg, var(--accent), #c00a17);
+        color: #fff;
+        font-size: 1rem;
+        font-weight: 700;
+        cursor: pointer;
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+      }
+
+      .button:hover {
+        transform: translateY(-1px);
+        box-shadow: 0 14px 30px rgba(255, 31, 43, 0.25);
+      }
+
+      .message {
+        min-height: 24px;
+        margin-top: 16px;
+        font-size: 0.95rem;
+      }
+
+      .message.success {
+        color: #7ef9ff;
+      }
+
+      .message.error {
+        color: #ff8a8f;
+      }
+
+      .note {
+        margin-top: 26px;
+        font-size: 0.92rem;
+        color: var(--muted);
+        line-height: 1.5;
+      }
+    </style>
+  </head>
+  <body>
+    <main class="login-card">
+      <h1>Đăng nhập hệ thống</h1>
+      <p>Đây là file đăng nhập riêng biệt, dành riêng để lưu trữ thông tin xác thực người dùng.</p>
+
+      <form id="loginForm">
+        <div class="field">
+          <label for="userEmail">Email</label>
+          <input type="email" id="userEmail" name="userEmail" placeholder="nhập email của bạn" required />
+        </div>
+
+        <div class="field">
+          <label for="userPassword">Mật khẩu</label>
+          <input type="password" id="userPassword" name="userPassword" placeholder="nhập mật khẩu" required />
+        </div>
+
+        <div class="actions">
+          <label><input type="checkbox" id="rememberMe" /> Ghi nhớ đăng nhập</label>
+        </div>
+
+        <button class="button" type="submit">Đăng nhập</button>
+      </form>
+
+      <div id="loginMessage" class="message"></div>
+
+      <p class="note">Lưu ý: Đây là demo front-end. Để bảo mật thật sự, bạn cần xử lý xác thực trên máy chủ và mã hóa mật khẩu.</p>
+    </main>
+
+    <script>
+      const loginForm = document.getElementById("loginForm");
+      const loginMessage = document.getElementById("loginMessage");
+
+      loginForm.addEventListener("submit", (event) => {
+        event.preventDefault();
+
+        const email = document.getElementById("userEmail").value.trim();
+        const password = document.getElementById("userPassword").value.trim();
+        const remember = document.getElementById("rememberMe").checked;
+
+        if (!email || !password) {
+          loginMessage.textContent = "Vui lòng nhập đầy đủ email và mật khẩu.";
+          loginMessage.className = "message error";
+          return;
+        }
+
+        const userInfo = {
+          email,
+          password: password,
+          timestamp: new Date().toISOString(),
+        };
+
+        if (remember) {
+          localStorage.setItem("gameDashboardUser", JSON.stringify(userInfo));
+        } else {
+          sessionStorage.setItem("gameDashboardUser", JSON.stringify(userInfo));
+        }
+
+        loginMessage.textContent = "Đăng nhập thành công! Dữ liệu đã được lưu tạm vào bộ nhớ trình duyệt.";
+        loginMessage.className = "message success";
+        loginForm.reset();
+      });
+    </script>
+  </body>
+</html>
