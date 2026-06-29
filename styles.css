@@ -246,6 +246,61 @@ body {
   padding-left: 18px;
 }
 
+.detail-meta,
+.detail-list {
+  margin-top: 14px;
+  display: grid;
+  gap: 10px;
+}
+
+.detail-meta span,
+.panel-extra h3 {
+  display: inline-block;
+  color: #f1f5f9;
+}
+
+.detail-meta {
+  padding: 12px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.detail-list h3,
+.panel-extra h3 {
+  margin: 0 0 10px;
+  font-size: 1rem;
+  color: var(--primary);
+}
+
+.detail-list ul,
+.panel-extra ul {
+  padding-left: 18px;
+  margin: 0;
+}
+
+.detail-list li,
+.panel-extra li {
+  margin-bottom: 8px;
+  color: var(--muted);
+}
+
+.panel-extra {
+  margin-top: 18px;
+  padding-top: 16px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.official-link {
+  display: inline-block;
+  color: #ff999f;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.official-link:hover {
+  color: #fff;
+}
+
 @media (max-width: 900px) {
   .hero {
     grid-template-columns: 1fr;
