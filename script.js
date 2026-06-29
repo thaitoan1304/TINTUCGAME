@@ -4,7 +4,8 @@ const games = [
     title: "Valorant",
     tag: "FPS / Esports",
     desc: "Một tựa game bắn súng chiến thuật với lối chơi nhanh, đầy kịch tính và cộng đồng esports cực lớn.",
-    image: "https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&w=900&q=80",
+    image:
+      "https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&w=900&q=80",
     views: "2.4M người xem",
     trend: "Tăng trưởng 18%",
     summary:
@@ -30,7 +31,8 @@ const games = [
     title: "Genshin Impact",
     tag: "Open World",
     desc: "Thế giới mở đẹp mắt, câu chuyện phong phú và các sự kiện mới luôn khiến người chơi hào hứng trở lại.",
-    image: "https://images.unsplash.com/photo-1511882150382-421056c89033?auto=format&fit=crop&w=900&q=80",
+    image:
+      "https://images.unsplash.com/photo-1511882150382-421056c89033?auto=format&fit=crop&w=900&q=80",
     views: "1.8M người xem",
     trend: "Hot trong tuần",
     summary:
@@ -56,7 +58,8 @@ const games = [
     title: "Fortnite",
     tag: "Battle Royale",
     desc: "Sự kiện thời trang, các mùa mới và gameplay sáng tạo giúp Fortnite luôn giữ vị trí hàng đầu.",
-    image: "https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=900&q=80",
+    image:
+      "https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=900&q=80",
     views: "3.1M người xem",
     trend: "Xu hướng mới",
     summary:
@@ -82,7 +85,8 @@ const games = [
     title: "EA Sports FC 25",
     tag: "Sports",
     desc: "Bóng đá điện tử với đồ họa đẹp, gameplay mượt và sự kiện bóng đá hấp dẫn mỗi mùa.",
-    image: "https://images.unsplash.com/photo-1579952363873-27f3bade9f55?auto=format&fit=crop&w=900&q=80",
+    image:
+      "https://images.unsplash.com/photo-1579952363873-27f3bade9f55?auto=format&fit=crop&w=900&q=80",
     views: "1.2M người xem",
     trend: "Đang lên",
     summary:
@@ -108,7 +112,8 @@ const games = [
     title: "Minecraft",
     tag: "Sandbox",
     desc: "Game sáng tạo không bao giờ hết hot, đặc biệt với cộng đồng xây dựng và mod cực kỳ phong phú.",
-    image: "https://images.unsplash.com/photo-1601987077677-5346c0c57d3f?auto=format&fit=crop&w=900&q=80",
+    image:
+      "https://images.unsplash.com/photo-1601987077677-5346c0c57d3f?auto=format&fit=crop&w=900&q=80",
     views: "4.0M người xem",
     trend: "Vĩnh cửu",
     summary:
@@ -134,7 +139,8 @@ const games = [
     title: "Honkai: Star Rail",
     tag: "RPG / Story",
     desc: "Câu chuyện lôi cuốn, nhân vật ấn tượng và hệ thống chiến đấu đa dạng khiến game luôn được chú ý.",
-    image: "https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&w=900&q=80",
+    image:
+      "https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&w=900&q=80",
     views: "1.6M người xem",
     trend: "Phổ biến",
     summary:
@@ -251,7 +257,7 @@ function renderDetailPage() {
       <div class="stats">
         <span>🎮 ${game.views}</span>
         <span>🔥 ${game.trend}</span>
-        <span>⏱️ Cập nhật ${new Date().toLocaleTimeString('vi-VN')}</span>
+        <span>⏱️ Cập nhật ${new Date().toLocaleTimeString("vi-VN")}</span>
       </div>
     </div>
   `;
