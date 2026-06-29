@@ -317,7 +317,7 @@ function renderGameCards() {
       (game) => `
         <article class="card">
           <a class="card-link" href="game-detail.html?game=${game.slug}">
-            <img src="${getGameImage(game)}" alt="${game.title}" loading="lazy" />
+            <img src="${getGameImage(game)}" alt="${game.title}" loading="lazy" onerror="this.onerror=null;this.src='${game.image}';" />
             <div class="card-body">
               <span class="tag">${game.tag}</span>
               <h3>${game.title}</h3>
@@ -363,7 +363,7 @@ function renderDetailPage() {
   }
 
   detailHero.innerHTML = `
-    <img src="${getGameImage(game)}" alt="${game.title}" loading="lazy" />
+    <img src="${getGameImage(game)}" alt="${game.title}" loading="lazy" onerror="this.onerror=null;this.src='${game.image}';" />
     <div class="hero-content">
       <span class="pill">${game.tag}</span>
       <h1>${game.title}</h1>
